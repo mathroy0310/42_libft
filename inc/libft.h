@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2023/10/03 18:16:40 by maroy            ###   ########.fr       */
+/*   Updated: 2023/10/03 18:32:43 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,13 @@ char				*get_next_line(int fd);
 /// @param c The character to skip
 /// @return The string after skipping all the characters c
 char		*ft_skip_chars(char *str, char c);
+
+/// @brief Check if the number n is in the range [low - high]
+/// @param n The number to check
+/// @param low The lower bound
+/// @param high Ther Higher Bound
+/// @return 1 if n is in the range [low - high] , 0 otherwise
+int			ft_inrange(int n, int low, int high);
 
 // lst
 
