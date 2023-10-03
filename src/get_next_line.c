@@ -1,110 +1,82 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   get_next_line.c                                   ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2022/11/23 15:17:16 by marvin                                   */
-/*   Updated: 2023/07/31 11:42:04 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/23 15:17:16 by marvin            #+#    #+#             */
+/*   Updated: 2023/10/03 18:51:14 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
+#define BUFFER_SIZE 1024
+#include <stdio.h>
+#include <stdbool.h>
 
-static char	*ft_line(char *str)
+
+typedef struct s_gnl
 {
-	int		i;
-	char	*tab;
+	char	buf[BUFFER_SIZE + 1];
+	char	*cur;
+	bool	done;
+}	t_gnl;
 
-	i = 0;
-	if (!str[i])
-		return (NULL);
-	while (str[i] && str[i] != '\n')
-		i++;
-	tab = (char *)malloc(sizeof(char) * (i + 2));
-	if (!tab)
-		return (NULL);
-	i = 0;
-	while (str[i] && str[i] != '\n')
-	{
-		tab[i] = str[i];
-		i++;
-	}
-	if (str[i] == '\n')
-	{
-		tab[i] = str[i];
-		i++;
-	}
-	tab[i] = '\0';
-	return (tab);
+long	read_fd(t_gnl *data, int fd, char *buf)
+{
+	long	br;
+
+	br = read(fd, buf, BUFFER_SIZE);
+	if (br >= 0)
+		buf[br] = 0;
+	if (br == 0)
+		data->done = true;
+	return (br);
 }
 
-static char	*ft_next_line(char *str)
+bool	init_data(t_gnl *data, int fd)
 {
-	int		i;
-	int		j;
-	char	*tab;
-
-	i = 0;
-	while (str[i] && str[i] != '\n')
-		i++;
-	if (!str[i])
-	{
-		free(str);
-		return (NULL);
-	}
-	tab = (char *)malloc(sizeof(char) * (ft_strlen(str) - i + 1));
-	if (!tab)
-	{
-		free(tab);
-		return (NULL);
-	}
-	i++;
-	j = 0;
-	while (str[i] && str)
-		tab[j++] = str[i++];
-	tab[j] = '\0';
-	free(str);
-	return (tab);
+	if (read_fd(data, fd, data->buf) < 0)
+		return (false);
+	data->cur = data->buf;
+	return (true);
 }
 
-static char	*ft_read(int fd, char *str)
+char	*extend_line(t_gnl *data, char *line)
 {
-	char	*buff;
-	int		bytes;
+	char	*extend;
 
-	buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	if (!buff)
-		return (0);
-	bytes = 1;
-	while (!ft_strchr(str, '\n') && bytes != 0)
-	{
-		bytes = read(fd, buff, BUFFER_SIZE);
-		if (bytes == -1)
-		{
-			free(buff);
-			free(str);
-			return (0);
-		}
-		buff[bytes] = '\0';
-		str = ft_strjoin(str, buff);
-	}
-	free(buff);
-	return (str);
+	extend = ft_strjoin(line, data->cur);
+	free(line);
+	return (extend);
 }
 
 char	*get_next_line(int fd)
 {
-	static char	*buff;
-	char		*line;
+	static t_gnl	data;
+	char			*line;
+	long			br;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (0);
-	buff = ft_read(fd, buff);
-	if (!buff)
-		return (0);
-	line = ft_line(buff);
-	buff = ft_next_line(buff);
+	if ((!data.cur && !init_data(&data, fd)) || data.done)
+		return (NULL);
+	line = ft_strdup("");
+	while (!ft_strchr(data.cur, '\n'))
+	{
+		line = extend_line(&data, line);
+		if (!line)
+			return (NULL);
+		br = read_fd(&data, fd, data.buf);
+		if (br < 0)
+			return (NULL);
+		else if (!br)
+			return (line);
+		data.cur = data.buf;
+	}
+	*(ft_strchr(data.cur, '\n')) = 0;
+	line = extend_line(&data, line);
+	if (!line)
+		return (NULL);
+	data.cur = ft_strchr(data.cur, 0) + 1;
 	return (line);
 }
