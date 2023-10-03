@@ -1,13 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   libft.h                                           ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2022/10/17 12:41:20 by maroy                                    */
-/*   Updated: 2023/09/16 21:20:34 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
+/*   Updated: 2023/10/03 18:16:40 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
@@ -94,6 +94,13 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 char				*get_next_line(int fd);
 
 //* Mes Fonctions *//
+
+
+/// @brief Skip all the characters c in the string str , Stops when non c character is found
+/// @param str The string to skip
+/// @param c The character to skip
+/// @return The string after skipping all the characters c
+char		*ft_skip_chars(char *str, char c);
 
 // lst
 
