@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2023/10/03 18:32:43 by maroy            ###   ########.fr       */
+/*   Updated: 2023/10/03 19:58:13 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ size_t				ft_strlen(const char *s);
 // Returns a pointer to the first occurrence of character in the C string str.
 // The terminating null-character is considered part of the C string. Therefore,
 // it can also be located in order to retrieve a pointer to the end of a string.
-char				*ft_strchr(char *save, int c);
+char				*ft_strchr(const char *str, int c);
 char				*ft_strrchr(const char *s, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 void				ft_bzero(void *s, size_t n);
