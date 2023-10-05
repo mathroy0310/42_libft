@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                     ██   ██ ██████         */
-/*   ft_putchar_fd.c                                   ██   ██      ██        */
+/*   ft_dlstadd_back.c                                 ██   ██      ██        */
 /*                                                     ███████  █████         */
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
-/*   Created: 2022/10/24 13:50:38 by maroy                                    */
-/*   Updated: 2023/07/31 11:42:04 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Created: 2023/07/14 09:37:42 by maroy                                    */
+/*   Updated: 2023/08/09 16:09:19 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_dlstadd_back(t_dlist **alst, t_dlist *new)
 {
-	write(fd, &c, 1);
+	t_dlist	*tmp;
+
+	if (!alst || !new)
+		return ;
+	if (!(*alst))
+	{
+		*alst = new;
+		return ;
+	}
+	tmp = *alst;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = new;
+	new->prev = tmp;
 }

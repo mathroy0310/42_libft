@@ -1,13 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   libft.h                                           ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2022/10/17 12:41:20 by maroy                                    */
-/*   Updated: 2023/10/05 13:37:18 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
+/*   Updated: 2023/10/03 19:58:13 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
@@ -18,15 +18,16 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# include "ft_ctype.h"
-# include "lst.h"
-# include "dlst.h"
-# include "ft_printf.h"
-
 # define BUFFER_SIZE 1024
 
 // linked list
-
+typedef struct s_list
+{
+	char			*content;
+	char			*key;
+	char			*value;
+	struct s_list	*next;
+}					t_list;
 
 // string.h
 void				*ft_memchr(const void *s, int c, size_t n);
@@ -77,29 +78,40 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 
-
+// Lst
+t_list				*ft_lstnew(void *content);
+void				ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstadd_front(t_list **lst, t_list *new);
+int					ft_lstsize(t_list *lst);
+t_list				*ft_lstlast(t_list *lst);
+void				ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
+void				ft_lstclear(t_list **lst, void (*del)(void *));
+void				ft_lstiter(t_list *lst, void (*f)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 // GNL
 char				*get_next_line(int fd);
 
 //* Mes Fonctions *//
 
-/// @brief Skip all the characters c in the string str.
-/// Stops when non c character is found
+
+/// @brief Skip all the characters c in the string str , Stops when non c character is found
 /// @param str The string to skip
 /// @param c The character to skip
 /// @return The string after skipping all the characters c
-char				*ft_skip_chars(char *str, char c);
+char		*ft_skip_chars(char *str, char c);
 
 /// @brief Check if the number n is in the range [low - high]
 /// @param n The number to check
 /// @param low The lower bound
 /// @param high Ther Higher Bound
 /// @return 1 if n is in the range [low - high] , 0 otherwise
-int					ft_inrange(int n, int low, int high);
+int			ft_inrange(int n, int low, int high);
 
 // lst
 
-
+void				ft_lstpush(t_list **lst, t_list *new);
 
 // is
 int					ft_iscntrl(int c);
@@ -144,5 +156,23 @@ int					is_white_space(char *buff);
 // Random
 int					ft_rand(int min, int max);
 
+//	doubly list , dlist
+typedef struct s_dlist
+{
+	void			*content;
+	struct s_dlist	*next;
+	struct s_dlist	*prev;
+}					t_dlist;
+
+t_dlist				*ft_dlstnew(void *content);
+void				ft_dlstadd_back(t_dlist **alst, t_dlist *new);
+void				ft_dlstadd_front(t_dlist **alst, t_dlist *new);
+t_dlist				*ft_dlstlast(t_dlist *lst);
+t_dlist				*ft_dlstfirst(t_dlist *lst);
+void				ft_dlstclear(t_dlist **lst, void (*del)(void *));
+void				ft_dlstdelone(t_dlist *lst, void (*del)(void *));
+void				ft_dlstpop_front(t_dlist **head, void (*del)(void *));
+void				ft_dlstpop_back(t_dlist **head, void (*del)(void *));
+void				ft_dlstclearback_addr(t_dlist **lst, void (*del)(void **));
 
 #endif
