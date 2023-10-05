@@ -1,18 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                     ██   ██ ██████         */
-/*   ft_putchar_fd.c                                   ██   ██      ██        */
+/*   ft_dlstclear.c                                    ██   ██      ██        */
 /*                                                     ███████  █████         */
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
-/*   Created: 2022/10/24 13:50:38 by maroy                                    */
-/*   Updated: 2023/10/05 13:35:32 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Created: 2023/07/14 21:41:39 by maroy                                    */
+/*   Updated: 2023/10/05 11:49:10 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_dlstclear(t_dlist **lst, void (*del)(void *))
 {
-	ft_fputchar(c, fd);
+	t_dlist	*current;
+	t_dlist	*then;
+
+	if (!lst || !*lst)
+		return ;
+	if (*lst)
+	{
+		current = (*lst)->next;
+		while (current)
+		{
+			then = current->next;
+			ft_dlstdelone(current, del);
+			current = then;
+		}
+	}
+	current = *lst;
+	while (current)
+	{
+		then = current->prev;
+		ft_dlstdelone(current, del);
+		current = then;
+	}
+	*lst = NULL;
 }

@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                     ██   ██ ██████         */
-/*   ft_putchar_fd.c                                   ██   ██      ██        */
+/*   ft_lstiter.c                                      ██   ██      ██        */
 /*                                                     ███████  █████         */
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
-/*   Created: 2022/10/24 13:50:38 by maroy                                    */
-/*   Updated: 2023/10/05 13:35:32 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Created: 2022/11/09 14:26:07 by maroy                                    */
+/*   Updated: 2023/10/05 11:49:55 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	ft_fputchar(c, fd);
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                     ██   ██ ██████         */
-/*   ft_putchar_fd.c                                   ██   ██      ██        */
+/*   ft_lstdelone.c                                    ██   ██      ██        */
 /*                                                     ███████  █████         */
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
-/*   Created: 2022/10/24 13:50:38 by maroy                                    */
-/*   Updated: 2023/10/05 13:35:32 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Created: 2022/11/09 12:16:53 by maroy                                    */
+/*   Updated: 2023/10/05 11:49:53 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	ft_fputchar(c, fd);
+	if (!lst)
+		return ;
+	del(lst->content);
+	free(lst);
 }

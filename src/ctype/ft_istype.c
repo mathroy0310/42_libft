@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                     ██   ██ ██████         */
-/*   ft_putchar_fd.c                                   ██   ██      ██        */
+/*   ft_istype.c                                       ██   ██      ██        */
 /*                                                     ███████  █████         */
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
-/*   Created: 2022/10/24 13:50:38 by maroy                                    */
-/*   Updated: 2023/10/05 13:35:32 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Created: 2023/10/05 12:17:13 by maroy                                    */
+/*   Updated: 2023/10/05 12:42:27 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/ft_ctype.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_istype(int _c, int _type)
 {
-	ft_fputchar(c, fd);
+	return (ft_isascii(_c) && (g_ctype_[(unsigned char)_c] & _type));
 }

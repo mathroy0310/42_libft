@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                     ██   ██ ██████         */
-/*   ft_putchar_fd.c                                   ██   ██      ██        */
+/*   ft_isxdigit.c                                     ██   ██      ██        */
 /*                                                     ███████  █████         */
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
-/*   Created: 2022/10/24 13:50:38 by maroy                                    */
-/*   Updated: 2023/10/05 13:35:32 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Created: 2023/08/01 15:11:14 by maroy                                    */
+/*   Updated: 2023/10/05 12:42:27 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/ft_ctype.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_isxdigit(int _c)
 {
-	ft_fputchar(c, fd);
+	return (ft_istype(_c, FT_CTYPE_X));
 }
