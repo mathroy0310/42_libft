@@ -6,11 +6,11 @@
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
 /*   Created: 2023/08/01 15:49:38 by maroy                                    */
-/*   Updated: 2023/08/01 15:54:31 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Updated: 2023/10/17 17:17:16 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 static float	parse_fraction(const char *str, int *index)
 {

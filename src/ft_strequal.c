@@ -6,11 +6,11 @@
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
 /*   Created: 2023/08/30 18:29:16 by maroy                                    */
-/*   Updated: 2023/08/30 18:30:05 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Updated: 2023/10/17 17:17:16 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 uint8_t	ft_strequal(const char *s1, const char *s2)
 {
