@@ -6,22 +6,21 @@
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
 /*   Created: 2022/11/23 15:17:16 by marvin                                   */
-/*   Updated: 2023/10/17 17:17:16 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Updated: 2023/10/26 15:58:23 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
 #include "libft.h"
 #define BUFFER_SIZE 1024
-#include <stdio.h>
 #include <stdbool.h>
-
+#include <stdio.h>
 
 typedef struct s_gnl
 {
 	char	buf[BUFFER_SIZE + 1];
 	char	*cur;
 	bool	done;
-}	t_gnl;
+}			t_gnl;
 
 long	read_fd(t_gnl *data, int fd, char *buf)
 {

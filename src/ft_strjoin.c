@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
 /*   Created: 2022/10/21 01:23:46 by maroy                                    */
-/*   Updated: 2023/10/17 17:17:16 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Updated: 2023/10/26 15:58:40 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int			lens1;
-	int			lens2;
-	char		*dst;
+	int		lens1;
+	int		lens2;
+	char	*dst;
 
 	if (!s1 || !s2)
 		return (NULL);
