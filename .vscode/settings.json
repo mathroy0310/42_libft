@@ -6,7 +6,8 @@
 		"_xlocale.h": "c",
 		"cdefs.h": "c",
 		"runetype.h": "c",
-		"math.h": "c"
+		"math.h": "c",
+		"libft.h": "c"
 	},
 	"cSpell.words": [
 		"DLST"

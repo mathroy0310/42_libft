@@ -6,22 +6,31 @@
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
 /*   Created: 2022/10/17 12:41:20 by maroy                                    */
-/*   Updated: 2023/10/26 16:00:45 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Updated: 2023/10/26 20:53:41 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include "cmath.h"
-# include "ctype.h"
-# include "dlist.h"
-# include "ft_stdint.h"
-# include "list.h"
+# include <stdarg.h>
 # include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# include "ctype.h"
+# include "dlist.h"
+# include "ft_bool.h"
+# include "ft_display.h"
+# include "ft_math.h"
+# include "ft_number.h"
+# include "ft_converter.h"
+char	*ft_strndup(const char *str, size_t n, t_bool free_str);
+# include "ft_printf.h"
+# include "ft_stdint.h"
+# include "ft_string.h"
+# include "list.h"
 # define BUFFER_SIZE 1024
 
 // string.h
@@ -43,13 +52,6 @@ void	ft_bzero(void *s, size_t n);
 // stdlib.h
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_itoa(int n);
-int		ft_atoi(const char *str);
-
-// Put[] functions
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putnbr_fd(int n, int fd);
 
 char	**ft_split(char const *s, char c);
 char	*ft_strdup(const char *s1);

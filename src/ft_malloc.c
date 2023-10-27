@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
 /*   Created: 2023/08/01 15:30:41 by maroy                                    */
-/*   Updated: 2023/10/17 17:17:16 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Updated: 2023/10/26 20:42:23 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_malloc(size_t size)
 	ptr = malloc(size);
 	if (!ptr)
 	{
-		ft_putstr_fd("Error: malloc failed\n", 2);
+		ft_putstr_errnl("Error: malloc failed");
 		exit(EXIT_FAILURE);
 	}
 	return (ptr);

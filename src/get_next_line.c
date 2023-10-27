@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.qc>                        ██ ██             */
 /*                                                          ██ ███████.qc     */
 /*   Created: 2022/11/23 15:17:16 by marvin                                   */
-/*   Updated: 2023/10/26 15:58:23 by maroy            >(.)__ <(.)__ =(.)__    */
+/*   Updated: 2023/10/26 20:16:14 by maroy            >(.)__ <(.)__ =(.)__    */
 /*                                                     (___/  (___/  (___/    */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ typedef struct s_gnl
 {
 	char	buf[BUFFER_SIZE + 1];
 	char	*cur;
-	bool	done;
+	t_bool	done;
 }			t_gnl;
 
 long	read_fd(t_gnl *data, int fd, char *buf)
@@ -30,16 +30,16 @@ long	read_fd(t_gnl *data, int fd, char *buf)
 	if (br >= 0)
 		buf[br] = 0;
 	if (br == 0)
-		data->done = true;
+		data->done = TRUE;
 	return (br);
 }
 
-bool	init_data(t_gnl *data, int fd)
+t_bool	init_data(t_gnl *data, int fd)
 {
 	if (read_fd(data, fd, data->buf) < 0)
-		return (false);
+		return (FALSE);
 	data->cur = data->buf;
-	return (true);
+	return (TRUE);
 }
 
 char	*extend_line(t_gnl *data, char *line)
