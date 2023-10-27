@@ -1,13 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   ctype.h                                           ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2023/10/17 17:00:26 by maroy                                    */
-/*   Updated: 2023/10/17 17:16:57 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   ctype.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/17 17:00:26 by maroy             #+#    #+#             */
+/*   Updated: 2023/10/26 22:39:12 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CTYPE_H
@@ -25,5 +25,8 @@ int					ft_toupper(int c);
 int					ft_ispunct(int c);
 int					ft_isspace(int c);
 int					ft_isxdigit(int c);
+
+char *ft_str_toupper(char *str);
+char *ft_str_tolower(char *str);
 
 #endif

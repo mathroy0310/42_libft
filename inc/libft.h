@@ -1,13 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   libft.h                                           ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2022/10/17 12:41:20 by maroy                                    */
-/*   Updated: 2023/10/26 20:53:41 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
+/*   Updated: 2023/10/26 22:29:00 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
@@ -20,33 +20,26 @@
 # include <unistd.h>
 
 # include "ctype.h"
-# include "dlist.h"
 # include "ft_bool.h"
 # include "ft_display.h"
 # include "ft_math.h"
+# include "ft_string.h"
 # include "ft_number.h"
 # include "ft_converter.h"
-char	*ft_strndup(const char *str, size_t n, t_bool free_str);
 # include "ft_printf.h"
 # include "ft_stdint.h"
-# include "ft_string.h"
+# include "dlist.h"
 # include "list.h"
 # define BUFFER_SIZE 1024
 
-// string.h
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memalloc(size_t size);
-size_t	ft_strlen(const char *s);
-// Returns a pointer to the first occurrence of character in the C string str.
-// The terminating null-character is considered part of the C string. Therefore,
-// it can also be located in order to retrieve a pointer to the end of a string.
-char	*ft_strchr(const char *str, int c);
-char	*ft_strrchr(const char *s, int c);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
+
 void	ft_bzero(void *s, size_t n);
 
 // stdlib.h
@@ -54,16 +47,7 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_itoa(int n);
 
 char	**ft_split(char const *s, char c);
-char	*ft_strdup(const char *s1);
-void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 // GNL
 char	*get_next_line(int fd);
@@ -89,17 +73,6 @@ void	*ft_malloc(size_t size);
 void	*ft_realloc(void *ptr, size_t size);
 void	*ft_free(void *ptr);
 void	ft_free_tab(char **tab);
-
-// string.h
-char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strcat(char *dest, const char *src);
-int		ft_strcmp(const char *s1, const char *s2);
-char	*ft_strncpy(char *dest, const char *src, size_t n);
-char	*ft_strtok(char *str, const char *delim);
-
-// atol , atof
-float	ft_atof(const char *str);
-long	ft_atol(const char *str);
 
 // custom
 int		ft_count_char(char *s, char c);

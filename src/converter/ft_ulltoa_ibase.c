@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ulltoa_ibase.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lduplain <lduplain@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/16 10:41:12 by lduplain          #+#    #+#             */
-/*   Updated: 2021/11/03 12:57:24 by lduplain         ###   ########.fr       */
+/*   Updated: 2023/10/26 22:40:17 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ char	*ft_ulltoa_ibase(unsigned long long number, int ibase,	\
 	result[length] = '\0';
 	result = fill_result(number, ibase, result, length);
 	if (uppercase)
-		result = ft_toupper(result);
+		result = ft_str_toupper(result);
 	return (result);
 }

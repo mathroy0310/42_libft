@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:25:12 by maroy             #+#    #+#             */
-/*   Updated: 2023/10/26 22:38:56 by maroy            ###   ########.fr       */
+/*   Created: 2023/08/01 15:41:01 by maroy             #+#    #+#             */
+/*   Updated: 2023/10/26 22:29:31 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+size_t	ft_strcpy(const char *source, char *destination)
 {
-	if (c >= 'A' && c <= 'Z')
-	{
-		c += 32;
-	}
-	return (c);
-}
+	size_t	source_length;
+	size_t	index;
 
-char *ft_str_tolower(char *str)
-{
-	if (!str)
+	if (!destination || !source)
 		return (0);
-	while (*str)
+	source_length = ft_strlen(source);
+	index = 0;
+	while (index < source_length)
 	{
-		*str = ft_tolower(*str);
-		str++;
+		destination[index] = source[index];
+		index++;
 	}
-	return (str);
+	destination[index] = 0;
+	return (source_length);
 }

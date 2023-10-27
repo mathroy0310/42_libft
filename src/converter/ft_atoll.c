@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lduplain <lduplain@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 18:04:20 by lduplain          #+#    #+#             */
-/*   Updated: 2021/11/25 13:39:04 by lduplain         ###   ########.fr       */
+/*   Updated: 2023/10/26 22:36:05 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <errno.h>
+#include <limits.h>
 
 long long	ft_atoll(char *str)
 {
@@ -21,7 +23,7 @@ long long	ft_atoll(char *str)
 	i = 0;
 	result = 0;
 	sign = 1;
-	while (str[i] && is_whitespace(str[i]))
+	while (str[i] && ft_isspace(str[i]))
 		i++;
 	while (str[i] && (str[i] == '-' || str[i] == '+'))
 	{

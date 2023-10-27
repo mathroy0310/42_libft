@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_natoi.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 18:01:27 by lduplain          #+#    #+#             */
-/*   Updated: 2021/02/08 10:56:34 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2023/10/26 22:36:16 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_natoi(char *str, size_t n)
 	i = 0;
 	result = 0;
 	is_negative = 1;
-	while (str[i] && is_whitespace(str[i]) && i < n)
+	while (str[i] && ft_isspace(str[i]) && i < n)
 		i++;
 	while (str[i] && (str[i] == '-' || str[i] == '+') && i < n)
 	{

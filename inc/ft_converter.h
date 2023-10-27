@@ -1,13 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   ft_converter.h                                    ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2020/12/09 13:16:50 by lduplain                                 */
-/*   Updated: 2023/10/26 20:47:27 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   ft_converter.h                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/09 13:16:50 by lduplain          #+#    #+#             */
+/*   Updated: 2023/10/26 22:27:32 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_CONVERTER_H
@@ -47,10 +47,7 @@ long long	ft_atoll(char *str);
 **	ibase(16) = "0123456789ABCDEF"
 **	./converter/ft_ulltoa_ibase.c
 */
-char		*ft_ulltoa_ibase(		\
-	unsigned long long number,	\
-	int ibase,					\
-	t_bool uppercase);
+char		*ft_ulltoa_ibase(unsigned long long number,int ibase,t_bool uppercase);
 
 /*
 **	Convert long long number to mallocated string in ibase ibase.
@@ -58,27 +55,9 @@ char		*ft_ulltoa_ibase(		\
 **	ibase(16) = "0123456789ABCDEF"
 **	./converter/ft_lltoa_ibase.c
 */
-char		*ft_lltoa_ibase(	\
-	long long number,		\
-	int ibase,				\
-	t_bool uppercase);
+char		*ft_lltoa_ibase(long long number,int ibase,t_bool uppercase);
 
-/*
-**	Get uppercased char from char c.
-**	c('a') = 'A'
-**	c('A') = 'A'
-**	c('1') = '1'
-**	./converter/ft_uppercase_char.c
-*/
-char		ft_uppercase_char(char c);
-
-/*
-**	Get lowercased char from char c.
-**	c('a') = 'a'
-**	c('A') = 'a'
-**	c('1') = '1'
-**	./converter/ft_lowercase_char.c
-*/
-char		ft_lowercase_char(char c);
+float	ft_atof(const char *str);
+long	ft_atol(const char *str);
 
 #endif

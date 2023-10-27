@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lduplain <lduplain@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 18:01:07 by lduplain          #+#    #+#             */
-/*   Updated: 2021/11/25 13:38:17 by lduplain         ###   ########.fr       */
+/*   Updated: 2023/10/26 22:35:35 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <errno.h>
+#include <limits.h>
 
 int	ft_atoi(char *str)
 {
@@ -21,7 +23,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	result = 0;
 	sign = 1;
-	while (str[i] && is_whitespace(str[i]))
+	while (str[i] && ft_isspace(str[i]))
 		i++;
 	while (str[i] && (str[i] == '-' || str[i] == '+'))
 	{

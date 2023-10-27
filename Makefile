@@ -1,13 +1,13 @@
 # **************************************************************************** #
 #                                                                              #
-#                                                      ██   ██ ██████          #
-#    Makefile                                          ██   ██      ██         #
-#                                                      ███████  █████          #
-#    By: maroy <maroy@student.42.qc>                        ██ ██              #
-#                                                           ██ ███████.qc      #
-#    Created: 2023/07/14 21:56:43 by maroy                                     #
-#    Updated: 2023/10/26 20:54:02 by maroy            >(.)__ <(.)__ =(.)__     #
-#                                                      (___/  (___/  (___/     #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: maroy <maroy@student.42.fr>                +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/07/14 21:56:43 by maroy             #+#    #+#              #
+#    Updated: 2023/10/26 22:33:41 by maroy            ###   ########.fr        #
+#                                                                              #
 # **************************************************************************** #
 
 #--- PROGRAM NAME ---#
@@ -20,15 +20,12 @@ HEADER_DIR		= inc/
 SRC_DIR		= src/
 SRC_SRC		= 	ft_bzero.c ft_calloc.c\
 				ft_memchr.c ft_memcmp.c ft_memcpy.c \
-				ft_memmove.c ft_memset.c ft_strchr.c ft_strdup.c ft_strndup.c ft_strlcat.c \
-				ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
-				ft_substr.c ft_strjoin.c ft_strtrim.c \
-				ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_inrange.c \
-				ft_is_white_space.c ft_strjoin_free.c ft_strjoin_char.c ft_memalloc.c \
-				get_next_line.c ft_strequal.c\
-				ft_free.c ft_free_tab.c ft_strtok.c ft_atof.c ft_atol.c \
-				ft_malloc.c ft_realloc.c \
-				ft_strcat.c ft_strcpy.c ft_strncpy.c ft_strcmp.c ft_count_char.c ft_count_words.c ft_tablen.c ft_skip_chars.c
+				ft_memmove.c ft_memset.c  \
+				ft_split.c ft_itoa.c ft_memalloc.c \
+				get_next_line.c ft_is_white_space.c \
+				ft_free.c ft_free_tab.c \
+				ft_malloc.c ft_realloc.c ft_inrange.c\
+				 ft_count_char.c ft_count_words.c ft_tablen.c ft_skip_chars.c
 
 SRC_DIR_LIST= src/list/
 SRC_LIST	= 	ft_lstadd_front.c ft_lstclear.c ft_lstmap.c ft_lstlast.c ft_lstsize.c \
@@ -46,7 +43,10 @@ SRC_DIR_MATH= src/ft_math/
 SRC_MATH	= ft_abs.c ft_floor.c ft_ceil.c ft_pow.c ft_sqrt.c ft_min_max.c ft_iabsui.c\
 
 SRC_DIR_STRING = src/string/
-SRC_STRING	= ft_append_char_to_str.c ft_append_strs.c ft_strmult_back.c ft_strmult_front.c \
+SRC_STRING	= ft_append_char_to_str.c ft_append_strs.c ft_strmult_back.c ft_strmult_front.c ft_strchr.c ft_strdup.c ft_strndup.c ft_strlcat.c \
+				ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
+				ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c  \
+				 ft_strjoin_free.c ft_strjoin_char.c ft_strequal.c ft_strtok.c ft_strcat.c ft_strcpy.c ft_strncpy.c ft_strcmp.c  \
 
 SRC_DIR_PRINTF= src/ft_printf/
 SRC_PRINTF	= ft_printf.c checker/printf_is_valid_flag.c checker/printf_is_valid_type.c \
@@ -86,12 +86,12 @@ SRC_DISPLAY_ULONG =nbr/ulong/ft_putul.c nbr/ulong/ft_putul_err.c nbr/ulong/ft_pu
 SRC_DISPLAY += $(SRC_DISPLAY_CHAR) $(SRC_DISPLAY_STR) $(SRC_DISPLAY_INT) $(SRC_DISPLAY_LONG) $(SRC_DISPLAY_LONGLONG) $(SRC_DISPLAY_UINT) $(SRC_DISPLAY_ULONG)
 
 SRC_DIR_NUMBER = src/number/
-SRC_NUMBER = ft_ll_lenght.c ft_ull_ibase_lenght.c ft_ull_lenght.c
+SRC_NUMBER = ft_lllength.c
 
 
 SRC_DIR_CONVERT = src/converter/
-SRC_CONVERT		= ft_atoi.c ft_atoll.c ft_lltoa_ibase.c ft_lowercase_char.c \
-					ft_natoi.c ft_ulltoa_ibase.c ft_uppercase_char.c
+SRC_CONVERT		= ft_atoi.c ft_atoll.c ft_lltoa_ibase.c \
+					ft_natoi.c ft_ulltoa_ibase.c ft_atof.c ft_atol.c
 
 
 SRC			= $(addprefix $(SRC_DIR), $(SRC_SRC))
