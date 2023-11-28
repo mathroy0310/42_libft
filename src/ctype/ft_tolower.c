@@ -6,13 +6,13 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:25:12 by maroy             #+#    #+#             */
-/*   Updated: 2023/10/26 22:38:56 by maroy            ###   ########.fr       */
+/*   Updated: 2023/11/28 13:50:14 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+t_u8	ft_tolower(t_u8 c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{

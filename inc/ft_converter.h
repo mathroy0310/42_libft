@@ -6,58 +6,82 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:16:50 by lduplain          #+#    #+#             */
-/*   Updated: 2023/10/26 22:27:32 by maroy            ###   ########.fr       */
+/*   Updated: 2023/11/28 14:24:41 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_CONVERTER_H
-# define LIBFT_CONVERTER_H
-
-/*
-**	START CUSTOM INCLUDES
-*/
+#ifndef FT_CONVERTER_H
+# define FT_CONVERTER_H
 
 # include "libft.h"
+/* ************************************************************************** */
+/* PATH : ./converter/ft_itoa.c */
 
-/*
-**	END CUSTOM INCLUDES
-*/
-
-/*
-**	Convert string to int.
-**	./converter/ft_atoi.c
+/**
+ *	@brief Converti une chaine de caractere en nombre entier
+ *	@param str la chaine de caractere a convertir
+ *	@return Retourne le nombre entier converti
 */
 int			ft_atoi(char *str);
+/* ************************************************************************** */
+/*	PATH : ./converter/ft_natoi.c */
 
-/*
-**	Convert string to int on n characters.
-**	./converter/ft_natoi.c
+/**
+ *	@brief Converti une chaine de caractere en nombre entier
+ *	@param str la chaine de caractere a convertir
+ *	@param n le nombre de caracteres a convertir
+ *	@return Retourne le nombre entier converti
 */
 int			ft_natoi(char *str, size_t n);
+/* ************************************************************************** */
+/* PATH : ./converter/ft_atoll.c */
 
-/*
-**	Convert string to long long.
-**	./converter/ft_atoll.c
-*/
+/**
+ * @brief Converti une chaine de caractere en nombre entier `long long`
+ * @param str la chaine de caractere a convertir
+ * @return Retourne le nombre entier `long long` converti
+ */
 long long	ft_atoll(char *str);
+/* ************************************************************************** */
+/* PATH : ./converter/ft_ulltoa_ibase.c */
 
-/*
-**	Convert unsigned long long number to mallocated string in ibase ibase.
-**	ibase(10) = "0123456789"
-**	ibase(16) = "0123456789ABCDEF"
-**	./converter/ft_ulltoa_ibase.c
-*/
+/**
+ * @brief Converti un nombre entier `unsigned long long` en chaine de caractere
+ * @param number le nombre entier `unsigned long long` a convertir
+ * @param ibase la base de conversion
+ * @param uppercase si `TRUE` la chaine de caractere sera en majuscule
+ * @return Retourne la chaine de caractere convertie
+ */
 char		*ft_ulltoa_ibase(unsigned long long number,int ibase,t_bool uppercase);
+/* ************************************************************************** */
+/* PATH : ./converter/ft_lltoa_ibase.c */
 
-/*
-**	Convert long long number to mallocated string in ibase ibase.
-**	ibase(10) = "0123456789"
-**	ibase(16) = "0123456789ABCDEF"
-**	./converter/ft_lltoa_ibase.c
-*/
+/**
+ * @brief Converti un nombre entier `long long` en chaine de caractere
+ * @param number le nombre entier `long long` a convertir
+ * @param ibase la base de conversion
+ * @param uppercase si `TRUE` la chaine de caractere sera en majuscule
+ * @return Retourne la chaine de caractere convertie
+ */
 char		*ft_lltoa_ibase(long long number,int ibase,t_bool uppercase);
+/* ************************************************************************** */
+/* PATH : ./converter/ft_atof.c */
 
+/**
+ * @brief Converti une chaine de caractere en nombre a virgule flottante
+ * @param str la chaine de caractere a convertir
+ * @return Retourne le nombre a virgule flottante converti
+ */
 float	ft_atof(const char *str);
-long	ft_atol(const char *str);
+/* ************************************************************************** */
+/* PATH : ./converter/ft_atol.c */
 
-#endif
+/**
+ * @brief Converti une chaine de caractere en nombre entier `long`
+ * @param str la chaine de caractere a convertir
+ * @return Retourne le nombre entier `long` converti
+ */
+long	ft_atol(const char *str);
+/* ************************************************************************** */
+
+#endif // FT_CONVERTER_H
