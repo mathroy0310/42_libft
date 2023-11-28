@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2023/10/26 22:29:00 by maroy            ###   ########.fr       */
+/*   Updated: 2023/11/28 15:32:16 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# include "ctype.h"
+# include "ft_ctype.h"
 # include "ft_bool.h"
 # include "ft_display.h"
 # include "ft_math.h"
