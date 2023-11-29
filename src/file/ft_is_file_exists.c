@@ -1,49 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ceil.c                                          :+:      :+:    :+:   */
+/*   ft_is_file_exists.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/01 16:06:05 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 22:51:39 by maroy            ###   ########.fr       */
+/*   Created: 2023/11/28 22:32:49 by maroy             #+#    #+#             */
+/*   Updated: 2023/11/28 23:07:13 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	ft_ceil(double x)
+t_bool	ft_is_file_exists(char *file_path)
 {
-	double	i;
-	double	f;
+	t_file	*file;
 
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
-}
-
-float	ft_ceilf(float x)
-{
-	float	i;
-	float	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
-}
-
-long double	ft_ceill(long double x)
-{
-	long double	i;
-	long double	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
+	file = ft_open_file(file_path, O_RDONLY);
+	if (!file)
+		return (FALSE);
+	ft_close_file(file);
+	return (TRUE);
 }

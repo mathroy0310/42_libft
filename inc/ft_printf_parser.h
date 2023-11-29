@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   ft_printf_parser.h                                ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2020/12/15 11:25:19 by lduplain                                 */
-/*   Updated: 2023/10/26 20:12:29 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_parser.h                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/15 11:25:19 by lduplain          #+#    #+#             */
+/*   Updated: 2023/11/28 22:41:06 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_PRINTF_PARSER_H
-# define LIBFT_PRINTF_PARSER_H
+#ifndef FT_PRINTF_PARSER_H
+# define FT_PRINTF_PARSER_H
 
 /*
 **	START CUSTOM INCLUDES

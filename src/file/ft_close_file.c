@@ -1,49 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ceil.c                                          :+:      :+:    :+:   */
+/*   ft_close_file.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/01 16:06:05 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 22:51:39 by maroy            ###   ########.fr       */
+/*   Created: 2023/11/28 22:06:45 by maroy             #+#    #+#             */
+/*   Updated: 2023/11/28 22:50:53 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	ft_ceil(double x)
+t_bool	ft_close_file(t_file *file)
 {
-	double	i;
-	double	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
-}
-
-float	ft_ceilf(float x)
-{
-	float	i;
-	float	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
-}
-
-long double	ft_ceill(long double x)
-{
-	long double	i;
-	long double	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
+	if (close(file->c_fd) == 1)
+		return (FALSE);
+	file->c_fd = 0;
+	ft_free(file->c_file_path);
+	ft_free(file->p_backup);
+	ft_free(file->readed_line);
+	ft_free(file);
+	return (TRUE);
 }

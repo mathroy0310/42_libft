@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lllength.c                                      :+:      :+:    :+:   */
+/*   ft_find_char.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/16 13:05:34 by lduplain          #+#    #+#             */
-/*   Updated: 2023/11/28 22:53:58 by maroy            ###   ########.fr       */
+/*   Created: 2020/12/10 12:25:31 by lduplain          #+#    #+#             */
+/*   Updated: 2023/11/28 23:23:26 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_ull_ibase_length(unsigned long long number, int ibase)
+ssize_t	ft_find_char(char *str, char c)
 {
-	size_t	result;
+	ssize_t	index;
 
-	result = 0;
-	while (number != 0)
+	if (!str)
+		return (-1);
+	index = 0;
+	while (str[index])
 	{
-		number /= ibase;
-		result++;
+		if (str[index] == c)
+			return (index);
+		index++;
 	}
-	return (result);
-}
-
-size_t	ft_ull_length(unsigned long long number)
-{
-	return (ft_ull_ibase_length(number, 10));
-}
-
-size_t	ft_ll_length(long long number)
-{
-	if (number < 0)
-		return (ft_ull_length((unsigned long long) - number) + 1);
-	return (ft_ull_length((unsigned long long)number));
+	return (-1);
 }

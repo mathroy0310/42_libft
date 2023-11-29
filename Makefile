@@ -6,7 +6,7 @@
 #    By: maroy <maroy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/14 21:56:43 by maroy             #+#    #+#              #
-#    Updated: 2023/10/26 22:33:41 by maroy            ###   ########.fr        #
+#    Updated: 2023/11/28 23:25:57 by maroy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,9 +44,14 @@ SRC_MATH	= ft_abs.c ft_floor.c ft_ceil.c ft_pow.c ft_sqrt.c ft_min_max.c ft_iabs
 
 SRC_DIR_STRING = src/string/
 SRC_STRING	= ft_append_char_to_str.c ft_append_strs.c ft_strmult_back.c ft_strmult_front.c ft_strchr.c ft_strdup.c ft_strndup.c ft_strlcat.c \
-				ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
+				ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_contains_char.c ft_find_char.c \
 				ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c  \
-				 ft_strjoin_free.c ft_strjoin_char.c ft_strequal.c ft_strtok.c ft_strcat.c ft_strcpy.c ft_strncpy.c ft_strcmp.c  \
+				 ft_strjoin_free.c ft_strjoin_char.c ft_strequal.c ft_strtok.c ft_strcat.c ft_strcpy.c ft_strncpy.c ft_strcmp.c ft_destroy_str_arr.c
+
+SRC_DIR_FILE = src/file/
+SRC_FILE	= ft_close_file.c ft_count_file_lines.c ft_create_file_content.c ft_fill_file_content.c ft_is_file_exists.c ft_get_file_content.c \
+				ft_open_file.c ft_destroy_file_content.c ft_read_next_line.c
+
 
 SRC_DIR_PRINTF= src/ft_printf/
 SRC_PRINTF	= ft_printf.c checker/printf_is_valid_flag.c checker/printf_is_valid_type.c \
@@ -83,6 +88,7 @@ SRC_DISPLAY_ULONG =nbr/ulong/ft_putul.c nbr/ulong/ft_putul_err.c nbr/ulong/ft_pu
 					nbr/ulonglong/ft_putull.c nbr/ulonglong/ft_putull_err.c nbr/ulonglong/ft_putull_errnl.c\
 					nbr/ulonglong/ft_putull_fd.c nbr/ulonglong/ft_putull_fdnl.c nbr/ulonglong/ft_putull_nl.c
 
+
 SRC_DISPLAY += $(SRC_DISPLAY_CHAR) $(SRC_DISPLAY_STR) $(SRC_DISPLAY_INT) $(SRC_DISPLAY_LONG) $(SRC_DISPLAY_LONGLONG) $(SRC_DISPLAY_UINT) $(SRC_DISPLAY_ULONG)
 
 SRC_DIR_NUMBER = src/number/
@@ -113,6 +119,8 @@ SRC			+= $(addprefix $(SRC_DISPLAY_DIR), $(SRC_DISPLAY))
 SRC 		+= $(addprefix $(SRC_DIR_NUMBER), $(SRC_NUMBER))
 
 SRC 		+= $(addprefix $(SRC_DIR_CONVERT), $(SRC_CONVERT))
+
+SRC			+= $(addprefix $(SRC_DIR_FILE), $(SRC_FILE))
 
 #--- OBJECTS ---#
 BIN_DIR     = bin/
@@ -153,6 +161,16 @@ fclean: clean
 #@echo "${RED}${NAME} executable successfully removed 🗑${DEFAULT}"
 
 re: fclean all
+
+.PHONY		:	norm
+norm:
+	@echo "$(DARKGRAY)Checking norminette output...$(DEFAULT)"
+	@if norminette $(HEADER_DIR) $(SRC) | grep -vq "OK!$$"; then \
+        echo "$(RED)Not all lines end with 'OK!'$(DEFAULT)"; \
+		norminette $(HEADER_DIR) $(SRC) | grep -v "OK!$$"; \
+	else \
+        echo "$(GREEN)All lines end with 'OK!'$(DEFAULT)"; \
+	fi
 
 .PHONY: all clean fclean re bonus
 

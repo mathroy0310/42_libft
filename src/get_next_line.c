@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   get_next_line.c                                   ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2022/11/23 15:17:16 by marvin                                   */
-/*   Updated: 2023/10/26 20:16:14 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/23 15:17:16 by marvin            #+#    #+#             */
+/*   Updated: 2023/11/28 22:54:21 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#define BUFFER_SIZE 1024
-#include <stdbool.h>
-#include <stdio.h>
+
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 1024
+#endif
 
 typedef struct s_gnl
 {

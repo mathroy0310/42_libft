@@ -6,31 +6,40 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 15:32:16 by maroy            ###   ########.fr       */
+/*   Updated: 2023/11/28 23:32:44 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# if defined(__linux__)
+#  define OS_LINUX 1
+#  include <linux/limits.h>
+# else
+#  define OS_LINUX 0
+#  include <limits.h>
+# endif
+
 # include <stdarg.h>
-# include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
-# include "ft_ctype.h"
 # include "ft_bool.h"
+# include "ft_stdint.h"
+
+# include "ft_file.h"
+# include "ft_ctype.h"
 # include "ft_display.h"
 # include "ft_math.h"
 # include "ft_string.h"
 # include "ft_number.h"
 # include "ft_converter.h"
 # include "ft_printf.h"
-# include "ft_stdint.h"
+
 # include "dlist.h"
 # include "list.h"
-# define BUFFER_SIZE 1024
 
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -39,7 +48,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memalloc(size_t size);
 
-
 void	ft_bzero(void *s, size_t n);
 
 // stdlib.h
@@ -47,7 +55,6 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_itoa(int n);
 
 char	**ft_split(char const *s, char c);
-
 
 // GNL
 char	*get_next_line(int fd);
@@ -80,7 +87,7 @@ int		ft_count_words(char *str, char *charset);
 int		ft_tablen(char **env);
 char	*ft_strjoin_free(char *s1, char *s2);
 char	*ft_strjoin_char(char *s, char c);
-uint8_t	ft_strequal(const char *s1, const char *s2);
+t_u8	ft_strequal(const char *s1, const char *s2);
 
 int		is_white_space(char *buff);
 // Random

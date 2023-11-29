@@ -1,5 +1,6 @@
 {
 	"files.associations": {
+		"*.s": "nasm",
 		"stdint.h": "c",
 		"ctype.h": "c",
 		"_ctype.h": "c",
@@ -7,9 +8,12 @@
 		"cdefs.h": "c",
 		"runetype.h": "c",
 		"math.h": "c",
-		"libft.h": "c"
+		"libft.h": "c",
+		"ft_file.h": "c",
+		"ft_printf.h": "c"
 	},
 	"cSpell.words": [
 		"DLST"
-	]
+	],
+	"C_Cpp.errorSquiggles": "disabled"
 }

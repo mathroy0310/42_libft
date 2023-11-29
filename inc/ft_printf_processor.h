@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   ft_printf_processor.h                             ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2020/12/10 12:46:25 by lduplain                                 */
-/*   Updated: 2023/10/26 20:12:58 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_processor.h                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/10 12:46:25 by lduplain          #+#    #+#             */
+/*   Updated: 2023/11/28 22:41:16 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_PRINTF_PROCESSOR_H
-# define LIBFT_PRINTF_PROCESSOR_H
+#ifndef FT_PRINTF_PROCESSOR_H
+# define FT_PRINTF_PROCESSOR_H
 
 /*
 **	START CUSTOM INCLUDES
@@ -84,4 +84,4 @@ void	pcrt_processor(t_printable *printable, va_list args, char **to_print);
 */
 size_t	display(t_printable *prtbl, char **to_print);
 
-#endif // LIBFT_PRINTF_PROCESSOR_H
+#endif // FT_PRINTF_PROCESSOR_H

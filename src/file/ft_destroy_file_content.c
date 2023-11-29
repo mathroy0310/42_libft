@@ -1,49 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ceil.c                                          :+:      :+:    :+:   */
+/*   ft_destroy_file_content.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/01 16:06:05 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 22:51:39 by maroy            ###   ########.fr       */
+/*   Created: 2023/11/28 23:08:56 by maroy             #+#    #+#             */
+/*   Updated: 2023/11/28 23:33:14 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	ft_ceil(double x)
+void	*ft_destroy_file_content(char ***file_content)
 {
-	double	i;
-	double	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
-}
-
-float	ft_ceilf(float x)
-{
-	float	i;
-	float	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
-}
-
-long double	ft_ceill(long double x)
-{
-	long double	i;
-	long double	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
+	ft_destroy_str_arr(file_content);
+	return (NULL);
 }

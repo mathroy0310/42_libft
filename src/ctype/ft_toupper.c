@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 12:44:58 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 13:50:18 by maroy            ###   ########.fr       */
+/*   Updated: 2023/11/28 22:53:18 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_u8	ft_toupper(t_u8 c)
 	return (c);
 }
 
-char *ft_str_toupper(char *str)
+char	*ft_str_toupper(char *str)
 {
 	if (!str)
 		return (0);

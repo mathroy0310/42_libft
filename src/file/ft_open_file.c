@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lllength.c                                      :+:      :+:    :+:   */
+/*   ft_open_file.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/16 13:05:34 by lduplain          #+#    #+#             */
-/*   Updated: 2023/11/28 22:53:58 by maroy            ###   ########.fr       */
+/*   Created: 2020/12/10 12:23:00 by lduplain          #+#    #+#             */
+/*   Updated: 2023/11/28 23:17:15 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_ull_ibase_length(unsigned long long number, int ibase)
+t_file	*ft_open_file(const char *path, int open_flag)
 {
-	size_t	result;
+	t_file	*file;
+	int		fd;
 
-	result = 0;
-	while (number != 0)
+	if (path == NULL)
+		fd = 0;
+	else
+		fd = open(path, open_flag);
+	if (fd == -1)
+		return (NULL);
+	file = ft_calloc(1, sizeof(t_file));
+	if (!file)
 	{
-		number /= ibase;
-		result++;
+		close(fd);
+		return (NULL);
 	}
-	return (result);
-}
-
-size_t	ft_ull_length(unsigned long long number)
-{
-	return (ft_ull_ibase_length(number, 10));
-}
-
-size_t	ft_ll_length(long long number)
-{
-	if (number < 0)
-		return (ft_ull_length((unsigned long long) - number) + 1);
-	return (ft_ull_length((unsigned long long)number));
+	file->c_fd = fd;
+	file->c_file_path = ft_strdup(path);
+	file->readed_line = 0;
+	file->p_backup = 0;
+	return (file);
 }

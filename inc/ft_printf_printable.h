@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   ft_printf_printable.h                             ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2021/01/11 13:50:45 by lduplain                                 */
-/*   Updated: 2023/10/26 20:16:14 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_printable.h                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/11 13:50:45 by lduplain          #+#    #+#             */
+/*   Updated: 2023/11/28 22:41:12 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_PRINTF_PRINTABLE_H
-# define LIBFT_PRINTF_PRINTABLE_H
+#ifndef FT_PRINTF_PRINTABLE_H
+# define FT_PRINTF_PRINTABLE_H
 
 /*
 **	START CUSTOM INCLUDES
@@ -55,4 +55,4 @@ t_printable	create_printable(void);
 size_t		parse_printable(const char *format, size_t i, t_printable *prtbl,
 				va_list args);
 
-#endif // LIBFT_PRINTF_PRINTABLE_H
+#endif // FT_PRINTF_PRINTABLE_H

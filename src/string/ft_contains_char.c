@@ -1,49 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ceil.c                                          :+:      :+:    :+:   */
+/*   ft_containts_char.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/01 16:06:05 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 22:51:39 by maroy            ###   ########.fr       */
+/*   Created: 2020/12/10 12:25:53 by lduplain          #+#    #+#             */
+/*   Updated: 2023/11/28 23:23:55 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	ft_ceil(double x)
+t_bool	ft_contains_char(char *str, char c)
 {
-	double	i;
-	double	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
-}
-
-float	ft_ceilf(float x)
-{
-	float	i;
-	float	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
-}
-
-long double	ft_ceill(long double x)
-{
-	long double	i;
-	long double	f;
-
-	i = x;
-	f = x - i;
-	if (f > 0)
-		return (i + 1);
-	return (i);
+	if (ft_find_char(str, c) == -1)
+		return (FALSE);
+	return (TRUE);
 }

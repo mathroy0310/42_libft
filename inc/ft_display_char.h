@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 14:25:17 by lduplain          #+#    #+#             */
-/*   Updated: 2023/11/28 14:22:56 by maroy            ###   ########.fr       */
+/*   Updated: 2023/11/28 22:43:01 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_putchar_fd(int fd, char c);
 /* PATH : ./display/char/ft_putchar_fdnl.c */
 
 /**
- * @brief Print character c sur le file descriptor fd suivi d'un retour a la ligne.
+ * @brief Print character c sur le  fd suivi d'un retour a la ligne.
  * 
  * @param fd le file descriptor sur lequel imprimer
  * @param c le caractere a imprimer
@@ -92,7 +92,7 @@ size_t	ft_putnchar_fd(int fd, char c, size_t n);
 /* PATH : ./display/char/ft_putnchr_fdnl */
 
 /**
- * @brief Print character c n fois sur le file descriptor fd suivi d'un retour a la ligne.
+ * @brief Print character c n fois sur le fd suivi d'un retour a la ligne.
  * 
  * @param fd le file descriptor sur lequel imprimer
  * @param c le caractere a imprimer
@@ -115,7 +115,8 @@ size_t	ft_putnchar(char c, size_t n);
 /* PATH : ./display/char/ft_putnchar_nl.c */
 
 /**
- * @brief Print character c n fois sur la sortie standard suivi d'un retour a la ligne.
+ * @brief Print character c n fois sur la 
+ * sortie standard suivi d'un retour a la ligne.
  * 
  * @param c le caractere a imprimer
  * @param n le nombre de fois a imprimer c
@@ -137,7 +138,8 @@ size_t	ft_putnchar_err(char c, size_t n);
 /* PATH : ./display/char/ft_putnchar_errnl.c */
 
 /**
- * @brief Print character c n fois sur la sortie d'erreur suivi d'un retour a la ligne.
+ * @brief Print character c n fois sur la sortie 
+ * d'erreur suivi d'un retour a la ligne.
  * 
  * @param c le caractere a imprimer
  * @param n le nombre de fois a imprimer c

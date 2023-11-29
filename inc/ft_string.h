@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 20:26:45 by maroy             #+#    #+#             */
-/*   Updated: 2023/10/26 22:30:46 by maroy            ###   ########.fr       */
+/*   Updated: 2023/11/28 23:32:59 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,16 @@ char	*ft_append_strs(char *s1, char *s2, t_bool free_s1, t_bool free_s2);
 **	(!WARNING) if to_mult is mallocated, ft_strmult_* don't free it.
 **	./strings/ft_strmult_front.c
 */
-char	*ft_strmult_front(char *to_mult,char *back,size_t n,t_bool free_back);
+char	*ft_strmult_front(char *to_mult, char *back, size_t n,
+			t_bool free_back);
 
 /*
 **	Append string front of string to_mult n times.
 **	(!WARNING) if to_mult is mallocated, ft_strmult_* don't free it.
 **	./strings/ft_strmult_back.c
 */
-char	*ft_strmult_back(char *to_mult, char *front, size_t n, t_bool free_front);
-
+char	*ft_strmult_back(char *to_mult, char *front, size_t n,
+			t_bool free_front);
 
 char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -73,4 +74,9 @@ int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strtok(char *str, const char *delim);
 
-#endif
+void	*ft_destroy_str_arr(char ***string_array);
+
+ssize_t	ft_find_char(char *str, char c);
+t_bool	ft_contains_char(char *str, char c);
+
+#endif // FT_STRING_H

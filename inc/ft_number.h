@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   ft_number.c                                       ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2020/12/16 12:20:58 by lduplain                                 */
-/*   Updated: 2023/10/26 20:43:41 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   ft_number.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/16 12:20:58 by lduplain          #+#    #+#             */
+/*   Updated: 2023/11/28 22:40:22 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_NUMBER_H
-# define LIBFT_NUMBER_H
+#ifndef FT_NUMBER_H
+# define FT_NUMBER_H
 
 /*
 **	START CUSTOM INCLUDES
@@ -44,4 +44,4 @@ size_t	ft_ull_length(unsigned long long number);
 */
 size_t	ft_ll_length(long long number);
 
-#endif
+#endif // FT_NUMBER_H

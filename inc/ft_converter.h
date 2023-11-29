@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:16:50 by lduplain          #+#    #+#             */
-/*   Updated: 2023/11/28 14:24:41 by maroy            ###   ########.fr       */
+/*   Updated: 2023/11/28 22:46:12 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  *	@brief Converti une chaine de caractere en nombre entier
  *	@param str la chaine de caractere a convertir
  *	@return Retourne le nombre entier converti
-*/
+ */
 int			ft_atoi(char *str);
 /* ************************************************************************** */
 /*	PATH : ./converter/ft_natoi.c */
@@ -31,7 +31,7 @@ int			ft_atoi(char *str);
  *	@param str la chaine de caractere a convertir
  *	@param n le nombre de caracteres a convertir
  *	@return Retourne le nombre entier converti
-*/
+ */
 int			ft_natoi(char *str, size_t n);
 /* ************************************************************************** */
 /* PATH : ./converter/ft_atoll.c */
@@ -52,7 +52,8 @@ long long	ft_atoll(char *str);
  * @param uppercase si `TRUE` la chaine de caractere sera en majuscule
  * @return Retourne la chaine de caractere convertie
  */
-char		*ft_ulltoa_ibase(unsigned long long number,int ibase,t_bool uppercase);
+char		*ft_ulltoa_ibase(unsigned long long number, int ibase,
+				t_bool uppercase);
 /* ************************************************************************** */
 /* PATH : ./converter/ft_lltoa_ibase.c */
 
@@ -63,7 +64,7 @@ char		*ft_ulltoa_ibase(unsigned long long number,int ibase,t_bool uppercase);
  * @param uppercase si `TRUE` la chaine de caractere sera en majuscule
  * @return Retourne la chaine de caractere convertie
  */
-char		*ft_lltoa_ibase(long long number,int ibase,t_bool uppercase);
+char		*ft_lltoa_ibase(long long number, int ibase, t_bool uppercase);
 /* ************************************************************************** */
 /* PATH : ./converter/ft_atof.c */
 
@@ -72,7 +73,7 @@ char		*ft_lltoa_ibase(long long number,int ibase,t_bool uppercase);
  * @param str la chaine de caractere a convertir
  * @return Retourne le nombre a virgule flottante converti
  */
-float	ft_atof(const char *str);
+float		ft_atof(const char *str);
 /* ************************************************************************** */
 /* PATH : ./converter/ft_atol.c */
 
@@ -81,7 +82,7 @@ float	ft_atof(const char *str);
  * @param str la chaine de caractere a convertir
  * @return Retourne le nombre entier `long` converti
  */
-long	ft_atol(const char *str);
+long		ft_atol(const char *str);
 /* ************************************************************************** */
 
 #endif // FT_CONVERTER_H
