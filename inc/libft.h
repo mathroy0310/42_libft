@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 23:32:44 by maroy            ###   ########.fr       */
+/*   Updated: 2023/12/03 17:23:52 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,6 @@ t_u8	ft_strequal(const char *s1, const char *s2);
 
 int		is_white_space(char *buff);
 // Random
-int		ft_rand(int min, int max);
+void	ft_close(int fd);
 
 #endif

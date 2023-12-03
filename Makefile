@@ -6,7 +6,7 @@
 #    By: maroy <maroy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/14 21:56:43 by maroy             #+#    #+#              #
-#    Updated: 2023/11/28 23:25:57 by maroy            ###   ########.fr        #
+#    Updated: 2023/12/03 17:22:33 by maroy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,9 @@ SRC_SRC		= 	ft_bzero.c ft_calloc.c\
 				ft_split.c ft_itoa.c ft_memalloc.c \
 				get_next_line.c ft_is_white_space.c \
 				ft_free.c ft_free_tab.c \
-				ft_malloc.c ft_realloc.c ft_inrange.c\
-				 ft_count_char.c ft_count_words.c ft_tablen.c ft_skip_chars.c
+				ft_malloc.c ft_realloc.c ft_inrange.c \
+				ft_count_char.c ft_count_words.c ft_tablen.c \
+				ft_skip_chars.c ft_close.c
 
 SRC_DIR_LIST= src/list/
 SRC_LIST	= 	ft_lstadd_front.c ft_lstclear.c ft_lstmap.c ft_lstlast.c ft_lstsize.c \
