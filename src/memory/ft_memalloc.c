@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_tab.c                                      :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/01 15:03:44 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 22:27:05 by maroy            ###   ########.fr       */
+/*   Created: 2023/09/12 18:14:59 by maroy             #+#    #+#             */
+/*   Updated: 2023/12/05 14:47:08 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_tab(char **tab)
+void	*ft_memalloc(size_t size)
 {
-	int	i;
+	void	*p;
 
-	i = 0;
-	if (!tab)
-		return ;
-	while (tab[i])
-		ft_free(tab[i++]);
-	ft_free(tab);
+	p = ft_malloc(size);
+	ft_bzero(p, size);
+	return (p);
 }

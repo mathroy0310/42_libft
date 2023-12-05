@@ -6,7 +6,7 @@
 #    By: maroy <maroy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/14 21:56:43 by maroy             #+#    #+#              #
-#    Updated: 2023/12/05 12:57:54 by maroy            ###   ########.fr        #
+#    Updated: 2023/12/05 14:56:57 by maroy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,13 +18,9 @@ HEADER_DIR		= inc/
 
 #--- SOURCES ---#
 SRC_DIR		= src/
-SRC_SRC		= 	ft_bzero.c ft_calloc.c\
-				ft_memchr.c ft_memcmp.c ft_memcpy.c \
-				ft_memmove.c ft_memset.c  \
-				ft_split.c ft_itoa.c ft_memalloc.c \
+SRC_SRC		= 	ft_split.c ft_itoa.c  \
 				get_next_line.c ft_is_white_space.c \
-				ft_free.c ft_free_tab.c \
-				ft_malloc.c ft_realloc.c ft_inrange.c \
+				 ft_inrange.c \
 				ft_count_char.c ft_count_words.c ft_tablen.c \
 				ft_skip_chars.c ft_close.c
 
@@ -53,6 +49,11 @@ SRC_DIR_FILE = src/file/
 SRC_FILE	= ft_close_file.c ft_count_file_lines.c ft_create_file_content.c ft_fill_file_content.c ft_is_file_exists.c ft_get_file_content.c \
 				ft_open_file.c ft_destroy_file_content.c ft_read_next_line.c
 
+SRC_DIR_MEM = src/memory/
+SRC_MEM		= ft_bzero.c ft_calloc.c ft_memdup.c \
+				ft_memchr.c ft_memcmp.c ft_memcpy.c \
+				ft_memmove.c ft_memset.c ft_memalloc.c \
+				ft_free.c ft_free_tab.c ft_malloc.c ft_realloc.c\
 
 SRC_DIR_PRINTF= src/ft_printf/
 SRC_PRINTF	= ft_printf.c checker/printf_is_valid_flag.c checker/printf_is_valid_type.c \
@@ -63,7 +64,6 @@ SRC_PRINTF	= ft_printf.c checker/printf_is_valid_flag.c checker/printf_is_valid_
 				process/processor/printf_pcrt_processor.c process/processor/printf_s_processor.c
 
 SRC_DISPLAY_DIR = src/display/
-
 SRC_DISPLAY_CHAR = char/ft_putchar.c char/ft_putchar_err.c char/ft_putchar_errnl.c char/ft_putchar_fd.c \
 					char/ft_putchar_fdnl.c char/ft_putchar_nl.c char/ft_putnchar.c char/ft_putnchar_err.c \
 					char/ft_putnchar_errnl.c char/ft_putnchar_fd.c char/ft_putnchar_fdnl.c char/ft_putnchar_nl.c
@@ -120,6 +120,8 @@ SRC			+= $(addprefix $(SRC_DISPLAY_DIR), $(SRC_DISPLAY))
 SRC 		+= $(addprefix $(SRC_DIR_NUMBER), $(SRC_NUMBER))
 
 SRC 		+= $(addprefix $(SRC_DIR_CONVERT), $(SRC_CONVERT))
+
+SRC 		+= $(addprefix $(SRC_DIR_MEM), $(SRC_MEM))
 
 SRC			+= $(addprefix $(SRC_DIR_FILE), $(SRC_FILE))
 

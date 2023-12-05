@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2023/12/05 13:17:29 by maroy            ###   ########.fr       */
+/*   Updated: 2023/12/05 14:59:35 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 # include "ft_colors.h"
 # include "ft_bool.h"
 # include "ft_stdint.h"
-
+# include "ft_memory.h"
 # include "ft_file.h"
 # include "ft_ctype.h"
 # include "ft_display.h"
@@ -42,17 +42,8 @@
 # include "dlist.h"
 # include "list.h"
 
-void	*ft_memchr(const void *s, int c, size_t n);
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
-void	*ft_memcpy(void *dst, const void *src, size_t len);
-void	*ft_memmove(void *dst, const void *src, size_t len);
-void	*ft_memset(void *b, int c, size_t len);
-void	*ft_memalloc(size_t size);
-
-void	ft_bzero(void *s, size_t n);
-
 // stdlib.h
-void	*ft_calloc(size_t count, size_t size);
+
 char	*ft_itoa(int n);
 
 char	**ft_split(char const *s, char c);
@@ -75,12 +66,6 @@ char	*ft_skip_chars(char *str, char c);
 /// @param high Ther Higher Bound
 /// @return 1 if n is in the range [low - high] , 0 otherwise
 int		ft_inrange(int n, int low, int high);
-
-//	Memory
-void	*ft_malloc(size_t size);
-void	*ft_realloc(void *ptr, size_t size);
-void	*ft_free(void *ptr);
-void	ft_free_tab(char **tab);
 
 // custom
 int		ft_count_char(char *s, char c);

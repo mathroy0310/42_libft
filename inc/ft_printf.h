@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 16:33:56 by lduplain          #+#    #+#             */
-/*   Updated: 2023/12/05 12:40:17 by maroy            ###   ########.fr       */
+/*   Updated: 2023/12/05 14:59:07 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int	ft_printf(const char *format, ...);
  * @param format va_list of arguments.
  * @return int return the number of printed characters.
  */
-int ft_debug_printf(const char *format, ...);
+int	ft_debug_printf(const char *format, ...);
 
-
-#endif
+#endif // FT_PRINTF_H
