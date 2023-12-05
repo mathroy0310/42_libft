@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2023/12/03 17:23:52 by maroy            ###   ########.fr       */
+/*   Updated: 2023/12/05 13:17:29 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# include "ft_colors.h"
 # include "ft_bool.h"
 # include "ft_stdint.h"
 

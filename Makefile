@@ -6,7 +6,7 @@
 #    By: maroy <maroy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/14 21:56:43 by maroy             #+#    #+#              #
-#    Updated: 2023/12/03 17:22:33 by maroy            ###   ########.fr        #
+#    Updated: 2023/12/05 12:57:54 by maroy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -143,6 +143,7 @@ bin/%.o: $(SRC_DIR)%.c  $(HEADER)
 
 # DEBUG
 # $(info $(SRC))
+
 all: $(NAME)
  
 $(NAME): $(BIN)
@@ -153,14 +154,17 @@ $(BINDIR)/%.o: %.c
 	@mkdir -p $(@D)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
+.PHONY: clean
 clean:
 	@rm -rf $(BIN_DIR)
 #@echo "${YELLOW}${NAME} binary files successfully removed 🗑${DEFAULT}"
  
+.PHONY: fclean
 fclean: clean
 	@$(RM) $(NAME)
 #@echo "${RED}${NAME} executable successfully removed 🗑${DEFAULT}"
 
+.PHONY : re
 re: fclean all
 
 .PHONY		:	norm
@@ -172,8 +176,6 @@ norm:
 	else \
         echo "$(GREEN)All lines end with 'OK!'$(DEFAULT)"; \
 	fi
-
-.PHONY: all clean fclean re bonus
 
 #--- COLORS ---#
 

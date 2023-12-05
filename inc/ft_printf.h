@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 16:33:56 by lduplain          #+#    #+#             */
-/*   Updated: 2023/11/28 22:40:38 by maroy            ###   ########.fr       */
+/*   Updated: 2023/12/05 12:40:17 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,16 @@
 **	./printf/ft_printf.c
 */
 int	ft_printf(const char *format, ...);
+
+/**
+ * @brief Print messages like printf function wth a debug prefix. 
+ * Usefull for debuging.\n
+ * Only Gonna work when DEBUG is set to TRUE `-DDEBUG=TRUE` in Makefile.
+ * 
+ * @param format va_list of arguments.
+ * @return int return the number of printed characters.
+ */
+int ft_debug_printf(const char *format, ...);
+
 
 #endif
