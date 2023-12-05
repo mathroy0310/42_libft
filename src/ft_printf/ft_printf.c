@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 11:14:12 by lduplain          #+#    #+#             */
-/*   Updated: 2023/12/05 13:14:38 by maroy            ###   ########.fr       */
+/*   Updated: 2023/12/05 13:23:50 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	ft_debug_printf(const char *format, ...)
 	va_start(args, format);
 	char_count = preprocess(format, args);
 	va_end(args);
-	return (char_count);
+	ft_putchar('\n');
+	return (char_count + 1);
 }
 
 int	ft_printf(const char *format, ...)
