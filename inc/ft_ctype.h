@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:00:26 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 15:32:00 by maroy            ###   ########.fr       */
+/*   Updated: 2023/12/08 21:35:18 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,15 @@
  * @param c le caractere a tester
  * @return 1 si le caractere est un chiffre ou une lettre, 0 sinon
  */
-
 t_u8	ft_isalnum(t_u8 c);
+
+/**
+ * @brief Check si la chaine de caractere est composee de chiffres ou de lettres
+ *
+ * @param str la chaine de caractere a tester
+ * @return 1 si la chaine de caractere est composee de chiffres ou de lettres, 0 sinon
+ */
+t_u8   ft_str_isalnum(char *str);
 /* ************************************************************************** */
 /* PATH : ./ctype/ft_isalpha.c */
 
@@ -35,8 +42,15 @@ t_u8	ft_isalnum(t_u8 c);
  * @param c le caractere a tester
  * @return 1 si le caractere est une lettre, 0 sinon
  */
-
 t_u8	ft_isalpha(t_u8 c);
+
+/**
+ * @brief Check si la chaine de caractere est composee de lettres
+ *
+ * @param str la chaine de caractere a tester
+ * @return 1 si la chaine de caractere est composee de lettres, 0 sinon
+ */
+t_u8   ft_str_isalpha(char *str);
 /* ************************************************************************** */
 /* PATH : ./ctype/ft_isascii.c */
 
@@ -67,6 +81,14 @@ t_u8	ft_iscntrl(t_u8 c);
  * @return 1 si le caractere est un chiffre, 0 sinon
  */
 t_u8	ft_isdigit(t_u8 c);
+
+/**
+ * @brief Check si la chaine de caractere est composee de chiffres
+ *
+ * @param str la chaine de caractere a tester
+ * @return 1 si la chaine de caractere est composee de chiffres, 0 sinon
+ */
+t_u8   ft_str_isdigit(char *str);
 /* ************************************************************************** */
 /* PATH : ./ctype/ft_isgraph.c */
 
