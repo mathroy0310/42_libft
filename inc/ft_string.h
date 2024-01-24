@@ -6,13 +6,14 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 20:26:45 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 23:32:59 by maroy            ###   ########.fr       */
+/*   Updated: 2024/01/24 01:52:59 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STRING_H
 # define FT_STRING_H
 
+# include "ft_bool.h"
 # include "libft.h"
 
 /*
