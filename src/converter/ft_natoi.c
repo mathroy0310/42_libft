@@ -6,12 +6,25 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 18:01:27 by lduplain          #+#    #+#             */
-/*   Updated: 2023/10/26 22:36:16 by maroy            ###   ########.fr       */
+/*   Updated: 2024/01/24 01:29:29 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Converts a portion of a string to an integer.
+ *
+ * This function takes a string `str` and a size `n` as input and converts
+ * the portion of the string up to `n` characters into an integer.
+ * The function skips leading whitespace characters,
+ * handles negative numbers, and stops
+ * conversion when encountering a non-digit character.
+ *
+ * @param str The string to convert.
+ * @param n The maximum number of characters to convert.
+ * @return The converted integer value.
+ */
 int	ft_natoi(char *str, size_t n)
 {
 	unsigned int	result;

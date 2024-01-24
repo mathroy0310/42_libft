@@ -1,38 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   ft_strlcat.c                                      ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2022/10/18 12:37:09 by maroy                                    */
-/*   Updated: 2023/10/17 17:17:16 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/18 12:37:09 by maroy             #+#    #+#             */
+/*   Updated: 2024/01/24 01:29:46 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Concatenates the string pointed to by `src` to the end of the string
+ * pointed to by `dst`. The total length of the resulting string is limited
+ * to `size` characters, including the null-terminating character.
+ *
+ * @param dst   The destination string.
+ * @param src   The source string.
+ * @param size  The size of the destination buffer.
+ * @return      The total length of the string that would have been created
+ *              if enough space had been available,
+ *				excluding the null-terminating
+ *character. If the return value is greater than or equal to `size`,
+ *              it indicates truncation occurred.
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	i;
+	size_t	return_size;
 
-	if (!src || !dst)
-		return (0);
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	i = 0;
-	if (size < dst_len + 1)
-		return (size + src_len);
-	if (size > dst_len + 1)
+	return_size = 0;
+	while (*dst && return_size < size)
 	{
-		while (src[i] != '\0' && dst_len + 1 + i < size)
-		{
-			dst[dst_len + i] = src[i];
-			i++;
-		}
+		dst++;
+		return_size++;
 	}
-	dst[dst_len + i] = '\0';
-	return (dst_len + src_len);
+	if (return_size >= size)
+		return (return_size + ft_strlen(src));
+	while (*src && return_size + 1 < size)
+	{
+		*dst = *src;
+		dst++;
+		src++;
+		return_size++;
+	}
+	*dst = '\0';
+	return (return_size + ft_strlen(src));
 }

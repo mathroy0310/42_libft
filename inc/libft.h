@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2024/01/23 19:27:46 by maroy            ###   ########.fr       */
+/*   Updated: 2024/01/24 01:43:18 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@
 # include "ft_dlist.h"
 # include "ft_list.h"
 
-// stdlib.h
-
 char	*ft_itoa(int n);
 
 char	**ft_split(char const *s, char c);
@@ -51,18 +49,7 @@ char	*get_next_line(int fd);
 
 //* Mes Fonctions *//
 
-/// @brief Skip all the characters c in the string str ,
-/// Stops when non c character is found
-/// @param str The string to skip
-/// @param c The character to skip
-/// @return The string after skipping all the characters c
 char	*ft_skip_chars(char *str, char c);
-
-/// @brief Check if the number n is in the range [low - high]
-/// @param n The number to check
-/// @param low The lower bound
-/// @param high Ther Higher Bound
-/// @return 1 if n is in the range [low - high] , 0 otherwise
 int		ft_inrange(int n, int low, int high);
 
 // custom

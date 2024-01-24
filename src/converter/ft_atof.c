@@ -1,13 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                     ██   ██ ██████         */
-/*   ft_atof.c                                         ██   ██      ██        */
-/*                                                     ███████  █████         */
-/*   By: maroy <maroy@student.42.qc>                        ██ ██             */
-/*                                                          ██ ███████.qc     */
-/*   Created: 2023/08/01 15:49:38 by maroy                                    */
-/*   Updated: 2023/10/17 17:17:16 by maroy            >(.)__ <(.)__ =(.)__    */
-/*                                                     (___/  (___/  (___/    */
+/*                                                        :::      ::::::::   */
+/*   ft_atof.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/01 15:49:38 by maroy             #+#    #+#             */
+/*   Updated: 2024/01/24 01:26:34 by maroy            ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
@@ -30,6 +30,21 @@ static float	parse_fraction(const char *str, int *index)
 	return (res);
 }
 
+/**
+ * @brief Converts a string representation of a floating-point
+ * number to a float value.
+ * 
+ * This function takes a string `str` as input and converts it to a float value.
+ * The string should represent a valid floating-point number.
+ * Leading whitespace characters are ignored.
+ * The function supports both positive and negative numbers.
+ * The function also supports decimal
+ * numbers, indicated by a decimal point '.' in the string.
+ * The decimal part is parsed separately using the `parse_fraction` function.
+ * 
+ * @param str The string representation of the floating-point number.
+ * @return The float value represented by the input string.
+ */
 float	ft_atof(const char *str)
 {
 	float	res;
