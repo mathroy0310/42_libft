@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2023/12/05 14:59:35 by maroy            ###   ########.fr       */
+/*   Updated: 2024/01/23 19:27:46 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# include "ft_colors.h"
-# include "ft_bool.h"
 # include "ft_stdint.h"
 # include "ft_memory.h"
 # include "ft_file.h"
@@ -39,8 +37,8 @@
 # include "ft_converter.h"
 # include "ft_printf.h"
 
-# include "dlist.h"
-# include "list.h"
+# include "ft_dlist.h"
+# include "ft_list.h"
 
 // stdlib.h
 
