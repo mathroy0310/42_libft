@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:05:40 by maroy             #+#    #+#             */
-/*   Updated: 2023/11/28 22:41:53 by maroy            ###   ########.fr       */
+/*   Updated: 2024/01/25 15:46:06 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,4 +160,4 @@ long double		ft_sqrtl(long double x);
 */
 unsigned int	ft_iabsui(int a);
 
-#endif // FT_MATH_H 
+#endif // FT_MATH_H

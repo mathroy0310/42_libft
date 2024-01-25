@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 19:24:18 by maroy             #+#    #+#             */
-/*   Updated: 2024/01/24 01:43:02 by maroy            ###   ########.fr       */
+/*   Updated: 2024/01/25 15:45:51 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,4 @@ typedef struct s_vect3d
 	double	z;
 }	t_vect3d;
 
-#endif
+#endif // FT_VECT
