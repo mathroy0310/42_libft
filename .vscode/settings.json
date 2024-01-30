@@ -2,6 +2,8 @@
 	"files.associations": {
 		"*.s": "nasm",
 		"ft_ctype.h": "c",
-		"typeinfo": "c"
+		"typeinfo": "c",
+		"libft.h": "c",
+		"ft_memory.h": "c"
 	}
 }

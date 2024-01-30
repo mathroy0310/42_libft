@@ -6,7 +6,7 @@
 #    By: maroy <maroy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/14 21:56:43 by maroy             #+#    #+#              #
-#    Updated: 2023/12/05 14:56:57 by maroy            ###   ########.fr        #
+#    Updated: 2024/01/30 17:26:05 by maroy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC_SRC		= 	ft_split.c ft_itoa.c  \
 
 SRC_DIR_LIST= src/list/
 SRC_LIST	= 	ft_lstadd_front.c ft_lstclear.c ft_lstmap.c ft_lstlast.c ft_lstsize.c \
-				ft_lstnew.c ft_lstadd_back.c ft_lstdelone.c ft_lstiter.c ft_lstpush.c \
+				ft_lstnew.c ft_lstnnew.c ft_lstadd_back.c ft_lstdelone.c ft_lstiter.c ft_lstpush.c \
 
 SRC_DIR_DLIST= src/dlist/
 SRC_DLIST	=	ft_dlstnew.c ft_dlstadd_back.c ft_dlstadd_front.c ft_dlstlast.c ft_dlstfirst.c \
