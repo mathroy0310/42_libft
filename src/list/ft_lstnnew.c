@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:23:48 by maroy             #+#    #+#             */
-/*   Updated: 2024/01/30 17:30:34 by maroy            ###   ########.fr       */
+/*   Updated: 2024/02/01 15:06:17 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,18 @@
 
 /**
  * Creates a new list element with the specified content and content size.
- * 
+ *
  * @param content The content to be stored in the list element.
  * @param content_size The size of the content.
- * @return A pointer to the newly created list element, or NULL if memory allocation fails.
+ * @return A pointer to the newly created list element,
+	or NULL if memory allocation fails.
  */
 t_list	*ft_lstnnew(void const *content, size_t content_size)
 {
-	t_list *elem;
+	t_list	*elem;
 
-	if (!(elem = (t_list *)malloc(sizeof(t_list))))
+	elem = (t_list *)malloc(sizeof(t_list));
+	if (!elem)
 		return (NULL);
 	if (!content)
 	{
@@ -34,7 +36,8 @@ t_list	*ft_lstnnew(void const *content, size_t content_size)
 	else
 	{
 		elem->content_size = content_size;
-		if (!(elem->content = malloc(content_size)))
+		elem->content = malloc(content_size);
+		if (!elem->content && content_size > 0)
 		{
 			free(elem);
 			return (NULL);

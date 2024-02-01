@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2024/01/24 01:43:18 by maroy            ###   ########.fr       */
+/*   Updated: 2024/02/01 15:08:04 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,14 @@ char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
 
 // GNL
+
+typedef struct s_gnl
+{
+	char	buf[BUFFER_SIZE + 1];
+	char	*cur;
+	t_bool	done;
+}			t_gnl;
+
 char	*get_next_line(int fd);
 
 //* Mes Fonctions *//

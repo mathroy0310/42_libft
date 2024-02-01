@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:17:16 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/28 22:54:21 by maroy            ###   ########.fr       */
+/*   Updated: 2024/02/01 15:07:49 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,6 @@
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE 1024
 #endif
-
-typedef struct s_gnl
-{
-	char	buf[BUFFER_SIZE + 1];
-	char	*cur;
-	t_bool	done;
-}			t_gnl;
 
 long	read_fd(t_gnl *data, int fd, char *buf)
 {

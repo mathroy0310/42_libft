@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:05:40 by maroy             #+#    #+#             */
-/*   Updated: 2024/01/25 15:46:06 by maroy            ###   ########.fr       */
+/*   Updated: 2024/02/01 15:08:32 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int				ft_min(int a, int b);
 /**
  * @brief Get the minimum of two `float` values.
  *
-
-	* Compare 2 floating-point values `a` and `b` and return the smaller of the two.
+ * Compare 2 floating-point values `a` and `b`
+ * and return the smaller of the two.
  *
  * @param a The first floating-point value to compare.
  * @param b The second floating-point value to compare.

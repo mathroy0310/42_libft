@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:09:59 by maroy             #+#    #+#             */
-/*   Updated: 2024/01/30 17:28:25 by maroy            ###   ########.fr       */
+/*   Updated: 2024/02/01 15:04:40 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@
  */
 typedef struct s_list
 {
-	char            *content;
-	size_t          content_size;
-	struct s_list   *next;
-}                   t_list;
+	char			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstnnew(void const *content, size_t content_size);

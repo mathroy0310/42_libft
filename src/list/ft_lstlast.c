@@ -2,19 +2,15 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+
-	+:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+
-	+#+        */
-/*                                                +#+#+#+#+#+
-	+#+           */
-/*   Created: 2022/10/25 14:00:17 by marvin            #+#    #+#             */
-/*   Updated: 2022/10/25 14:00:17 by marvin           ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/01 15:06:36 by maroy             #+#    #+#             */
+/*   Updated: 2024/02/01 15:06:36 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
-
 
 /**
  * @brief Returns the last element of a linked list.
@@ -24,7 +20,7 @@
  */
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *cur;
+	t_list	*cur;
 
 	if (!lst)
 		return (NULL);
