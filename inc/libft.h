@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:41:20 by maroy             #+#    #+#             */
-/*   Updated: 2024/02/09 21:34:21 by maroy            ###   ########.fr       */
+/*   Updated: 2024/02/09 21:57:01 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*get_next_line(int fd);
 //* Mes Fonctions *//
 
 char	*ft_skip_char(char *str, char c);
-char	*ft_skip_charset(char *str, char *charset);
+char	*ft_skip_charset(char *str, const char *charset);
 int		ft_inrange(int n, int low, int high);
 
 // custom
