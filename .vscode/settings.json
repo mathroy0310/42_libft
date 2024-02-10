@@ -4,6 +4,7 @@
 		"ft_ctype.h": "c",
 		"typeinfo": "c",
 		"libft.h": "c",
-		"ft_memory.h": "c"
+		"ft_memory.h": "c",
+		"bitset": "c"
 	}
 }
