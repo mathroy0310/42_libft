@@ -6,7 +6,7 @@
 /*   By: maroy <maroy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 19:24:18 by maroy             #+#    #+#             */
-/*   Updated: 2024/01/25 15:45:51 by maroy            ###   ########.fr       */
+/*   Updated: 2024/02/12 15:01:39 by maroy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_vect2d
 }	t_vect2d;
 
 /**
- * @brief Represents a 3D vector with x, y, and z components.
+ * @brief Represents a 3D vector with x, y, and z double components.
  */
 typedef struct s_vect3d
 {
@@ -40,5 +40,15 @@ typedef struct s_vect3d
 	double	y;
 	double	z;
 }	t_vect3d;
+
+/**
+ * @brief Represents a 3D vector with x, y, and z unsinged interger components.
+ */
+typedef struct s_vect3u
+{
+	unsigned int	x;
+	unsigned int	y;
+	unsigned int	z;
+}	t_vect3u;
 
 #endif // FT_VECT
